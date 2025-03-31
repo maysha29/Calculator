@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen bg-emerald-300">
+    <div class="calculator bg-amber-50 p-7 rounded-lg ">
+        <form >
+            <div class="display">
+                <input type="text" name="display" class="rounded-lg w-full h-12 px-4 border-2 text-right text-lg mb-4">
+            </div>
+            <div class=" gap-2 grid grid-cols-4">
+                <input type="button" value="AC"  class=" h-16 text-xl text-white bg-gray-300 rounded-md shadow-md btn hover:bg-red-400"onclick="display.value = ''">
+                <input type="button" value="DE" class="h-16 text-xl text-white bg-gray-300 rounded-md shadow-md btn hover:bg-red-400"onclick="display.value=display.value.slice(0,-1)">
+                <input type="button" value="." class="h-16 text-xl bg-gray-300 rounded-md shadow-md  btn hover:bg-gray-400"onclick="display.value += '.'">
+                <input type="button" value="/" class=" h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '/'">
+           
+                <input type="button" value="7" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"  onclick="display.value += '7'">
+                <input type="button" value="8" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400" onclick="display.value += '8'">
+                <input type="button" value="9" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400" onclick="display.value += '9'">
+                <input type="button" value="*" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400" onclick="display.value += '*'">
+           
+                <input type="button" value="4" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '4'">
+                <input type="button" value="5" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '5'">
+                <input type="button" value="6" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '6'">
+                <input type="button" value="-" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '-'">
+            
+                <input type="button" value="1" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '1'">
+                <input type="button" value="2" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '2'">
+                <input type="button" value="3" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '3'">
+                <input type="button" value="+" class="h-16 text-xl bg-gray-300 rounded-md shadow-md btn hover:bg-gray-400"onclick="display.value += '+'">
+           
+                <input type="button" value="00" class="h-16 text-xl btn bg-gray-300 rounded-md shadow-md hover:bg-gray-400" onclick="display.value += '00'">
+                <input type="button" value="0" class="h-16 text-xl btn  bg-gray-300 rounded-md shadow-md hover:bg-gray-400" onclick="display.value += '0'">
+                <input type="button" value="=" class="h-16 text-xl btn col-span-2 bg-gray-300 rounded-md shadow-md hover:bg-gray-400 equal" onclick="display.value=eval(display.value)">
+            </div>
+            
+        </form>
+
+    </div>
+    </div>
+</body>
+
+</html>
